@@ -1,0 +1,162 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* INFOTECH INTERNET SERVICES — Deep Emerald Green Design System */
+
+@layer base {
+  :root {
+    --radius: 0.125rem;
+
+    /* Canvas */
+    --background: 210 20% 98%;
+    --foreground: 222 47% 8%;
+
+    /* Cards */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 8%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 8%;
+
+    /* Primary — Telecom Emerald Green */
+    --primary: 160 84% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary */
+    --secondary: 160 20% 94%;
+    --secondary-foreground: 160 84% 20%;
+
+    /* Muted */
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 42%;
+
+    /* Accent — very light green tint */
+    --accent: 160 30% 94%;
+    --accent-foreground: 160 84% 20%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders */
+    --border: 214 32% 91%;
+    --input: 214 32% 88%;
+    --ring: 160 84% 30%;
+
+    /* Charts */
+    --chart-1: 160 84% 30%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 43 96% 56%;
+    --chart-4: 0 84% 60%;
+    --chart-5: 217 91% 60%;
+
+    /* Sidebar */
+    --sidebar-background: 160 45% 12%;
+    --sidebar-foreground: 160 20% 90%;
+    --sidebar-primary: 160 84% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 40% 20%;
+    --sidebar-accent-foreground: 160 20% 90%;
+    --sidebar-border: 160 35% 18%;
+    --sidebar-ring: 160 84% 55%;
+
+    /* Status */
+    --success: 160 84% 30%;
+    --warning: 43 96% 46%;
+    --info: 217 91% 55%;
+
+    /* Hero */
+    --hero-bg: 160 55% 12%;
+    --hero-fg: 0 0% 100%;
+
+    /* Price accent */
+    --price-color: 160 84% 28%;
+  }
+
+  .dark {
+    --background: 160 35% 6%;
+    --foreground: 160 10% 92%;
+    --card: 160 30% 9%;
+    --card-foreground: 160 10% 92%;
+    --popover: 160 30% 9%;
+    --popover-foreground: 160 10% 92%;
+    --primary: 160 70% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 160 25% 15%;
+    --secondary-foreground: 160 70% 70%;
+    --muted: 160 25% 14%;
+    --muted-foreground: 160 15% 55%;
+    --accent: 160 25% 16%;
+    --accent-foreground: 160 70% 70%;
+    --destructive: 0 62% 36%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 160 25% 16%;
+    --input: 160 25% 18%;
+    --ring: 160 70% 45%;
+    --chart-1: 160 70% 45%;
+    --chart-2: 160 55% 55%;
+    --chart-3: 43 80% 55%;
+    --chart-4: 0 70% 55%;
+    --chart-5: 217 80% 60%;
+    --sidebar-background: 160 40% 6%;
+    --sidebar-foreground: 160 10% 90%;
+    --sidebar-primary: 160 70% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 30% 12%;
+    --sidebar-accent-foreground: 160 10% 90%;
+    --sidebar-border: 160 30% 12%;
+    --sidebar-ring: 160 70% 50%;
+    --success: 160 70% 45%;
+    --warning: 43 80% 50%;
+    --info: 217 80% 60%;
+    --hero-bg: 160 55% 8%;
+    --hero-fg: 0 0% 100%;
+    --price-color: 160 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  /* Scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+}
+
+@layer utilities {
+  .price-text {
+    color: hsl(var(--price-color));
+    font-variant-numeric: tabular-nums;
+  }
+  .hero-section {
+    background-color: hsl(var(--hero-bg));
+    color: hsl(var(--hero-fg));
+  }
+  .spin-slow {
+    animation: spin 1.2s linear infinite;
+  }
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+}
